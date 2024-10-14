@@ -1,0 +1,28 @@
+{
+    "title": "Ceck power",
+    "description": "Sample Problem.",
+    "difficulty": "easy",
+    "testCases": [
+        {
+            "input": "3",
+            "output": "9"
+        },
+        {
+            "input": "4",
+            "output": "16"
+        },
+        {
+            "input": "5",
+            "output": "25"
+        }
+    ],
+    "codeStubs": [
+        {
+            "language": "JAVA",
+            "startSnippet": "import java.io.*;\nimport java.util.*;\nclass Main {\n    // compute reverse of a number\n    public static long rev(long n) {\n        long rev_num = 0;\n        while(n > 0) {\n            rev_num = rev_num * 10 + n % 10;\n            n = n / 10;\n        }\n        return rev_num;\n    }\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        // testcases\n        int T = sc.nextInt();\n        while(T-- > 0) {\n            Solution obj = new Solution();\n            int N;\n            // input N\n            N = sc.nextInt();\n            int R = 0;\n            // reverse the given number n\n            R = (int) rev(N);\n            // power of the number to its reverse\n            long ans = (long) obj.power(N, R);\n            System.out.println(ans);\n        }\n    }\n}",
+            "userSnippet": "class Solution { long power(int N, int R) { //Your code here } }",
+            "endSnippet": ""
+        }
+    ],
+    "editorial": "Womp Womp"
+}
